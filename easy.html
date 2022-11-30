@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easy game</title>
+    <link rel="stylesheet" href="index.css">
+  
+</head>
+
+<body>
+    <div class="game_bord">
+        <div class="your_guess">
+            <p style="font-weight:700;" id="score"></p>
+        </div>
+        <div class="your_guess">
+            <p style="font-weight:700;" id="youguess"> Your Guess</p>
+        </div>
+        <div class="new_game" id="game">
+            <button><a href="easy.html">New Game</a></button>
+        </div>
+        <div class="input_filed">
+            <input type="text" placeholder="Enter Your Guess" class="entre_guess" id="val">
+            <button onclick="dan()" class="cehk" id="btn">Check</button>
+        </div>
+        <div class="nu_attem">
+            <p>Number of previous attempts</p>
+            <p id="attempts">0</p>
+        </div>
+        <div class="nu_attem">
+            <p>Number of previous guesses</p>
+            <p id="pre_val">0</p>
+        </div>
+    </div>
+    <script>
+        var myarr = []; 
+        var d=10;
+        var ran = Math.floor(Math.random() * 100);
+        var count = 0;
+        var ids=document.forms["id"].value;
+        alert(ids);
+        function dan() {
+           
+            var dd = document.getElementById("val").value;
+            var pre_val = document.getElementById("pre_val");
+            var attempts = document.getElementById("attempts");
+            var score = document.getElementById("score");
+            var btn = document.getElementById("btn");
+            var input = document.getElementById("val");
+            var game=document.getElementById("game");
+            var youguess=document.getElementById("youguess");
+            if (count < d) {
+                pre_val.innerHTML = dd;
+                //alert(ran);
+                count++;
+                attempts.innerHTML = count;
+                myarr.push(dd);
+                // for(var i=0;i<=10;i++)
+                // {
+                //     console.log(myarr[i]);
+                // }
+
+                if(ran<dd&&ran!=dd)
+                {
+                    score.style.color="red";
+                    score.innerHTML ="Number is High";
+                }else if(ran>dd){
+                    score.innerHTML ="Number is low";
+                }
+                
+                if (ran == dd) {
+                    score.innerHTML = "You Win!";
+                    btn.style.display = "none";
+                    input.style.display = "none";
+                    youguess.style.display="none";
+                    game.style.display="flex";
+                }
+            } else {
+                score.innerHTML = "You Loss!";
+                btn.style.display = "none";
+                input.style.display = "none";
+                youguess.style.display="none";
+                game.style.display="flex";
+
+            }
+
+
+        }
+   
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
+body{
+    width:100%;
+    height:650px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.game_bord{
+    background-color: white;
+    padding:50px;
+    border-radius: 4px;
+    width:400px;
+    font-size: 22px;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image_pro{
+    width:300px;
+    height:130px;
+}
+
+.defficult {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px 0;
+}
+.easy , .hard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.easy_btn,.hard_btn{
+    width:200px;
+}
+.easy_btn{
+    padding: 10px 12px;
+    background:linear-gradient(rgb(38, 17, 158),blue);
+    border-radius: 3px; 
+    outline: none;
+    border:0;
+    margin:10px 0;
+}
+
+
+.easy_btn a{
+    color:white;
+    font-size:17px;
+}
+
+.hard_btn{
+    padding: 10px 12px;
+    background:linear-gradient(rgb(94, 10, 128),rgb(122, 8, 126));
+    border-radius: 3px; 
+    outline: none;
+    border:0;
+    margin:10px 0;
+}
+
+.hard_btn a{
+    color:white;
+    font-size:17px;
+}
+
+
+/*Easy Game*/
+
+
+.your_guess,.input_filed,.new_game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entre_guess{
+    font-size: 17px;
+    padding: 5px;
+    margin-top:15px;
+    margin-bottom: 20px;
+}
+
+.nu_attem{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:10px 0;
+    font-family: serif;
+}
+
+.new_game{
+    display:none;
+    margin-top:10px;
+}
+.new_game button{
+    padding: 5px 10px;
+    background:linear-gradient(rgb(94, 10, 128),rgb(122, 8, 126));
+    border:0;
+    border-radius: 4px;
+}
+
+.new_game button a{
+    color:white;
+    font-size: 18px;
+}
